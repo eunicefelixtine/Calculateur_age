@@ -9,6 +9,8 @@ public class CalculateurViewModel : BaseViewModel
 
     private string _resultat = "";
 
+    private string _messageAge = "";
+
     private bool _resultatVisible;
 
     public string Nom
@@ -37,6 +39,15 @@ public class CalculateurViewModel : BaseViewModel
 
         set => SetField(
             ref _resultat,
+            value);
+    }
+
+    public string MessageAge
+    {
+        get => _messageAge;
+
+        set => SetField(
+            ref _messageAge,
             value);
     }
 
@@ -69,6 +80,7 @@ public class CalculateurViewModel : BaseViewModel
             age--;
         }
 
+        MessageAge = age >= 18 ? "Majeur" : "Mineur";
         Resultat = $"{Nom}, vous avez {age} ans";
         ResultatVisible = true;
     }

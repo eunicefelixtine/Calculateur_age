@@ -32,6 +32,11 @@
                 FontSize="20"
                 IsVisible="{Binding ResultatVisible}" />
 
+            <Label
+                Text="{Binding MessageAge}"
+                FontSize="18"
+                IsVisible="{Binding ResultatVisible}" />
+
         </VerticalStackLayout>
     </ScrollView>
 
