@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using CalculateurAge.Services;
 
 namespace CalculateurAge.ViewModels;
 
@@ -16,6 +17,8 @@ public class CalculateurViewModel : BaseViewModel
     private string _messageAnniversaire = "";
 
     private bool _resultatVisible;
+
+    private readonly INavigationService _navigationService;
 
     public ObservableCollection<string> HistoriqueCalculs { get; } = new();
 
@@ -72,23 +75,31 @@ public class CalculateurViewModel : BaseViewModel
     {
         get => _resultatVisible;
 
-        set => SetField(
-            ref _resultatVisible,
-            value);
+        set
+        {
+            if (SetField(ref _resultatVisible, value))
+                AfficherResultatCommand.Rafraichir();
+        }
     }
 
     public RelayCommand CalculerCommand { get; }
 
     public RelayCommand EffacerCommand { get; }
 
-    public CalculateurViewModel()
+    public AsyncRelayCommand AfficherResultatCommand { get; }
+
+    public CalculateurViewModel(INavigationService navigationService)
     {
+        _navigationService = navigationService;
         CalculerCommand = new RelayCommand(
             Calculer,
             () => !string.IsNullOrWhiteSpace(Nom)
                 && DateNaissance.Date <= DateTime.Today);
 
         EffacerCommand = new RelayCommand(Effacer);
+        AfficherResultatCommand = new AsyncRelayCommand(
+            () => _navigationService.AfficherResultatAsync(Resultat),
+            () => ResultatVisible);
     }
 
     private void Effacer()

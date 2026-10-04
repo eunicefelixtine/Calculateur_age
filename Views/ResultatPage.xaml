@@ -8,12 +8,12 @@
     <VerticalStackLayout Padding="20" Spacing="16">
 
         <Label
-            x:Name="lblMessage"
+            Text="{Binding Message}"
             FontSize="22" />
 
         <Button
             Text="Retour"
-            Clicked="OnRetourClicked" />
+            Command="{Binding RetourCommand}" />
 
     </VerticalStackLayout>
 

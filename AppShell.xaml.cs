@@ -1,15 +1,20 @@
-﻿using CalculateurAge.Views;
+﻿using CalculateurAge.Services;
+using CalculateurAge.Views;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace CalculateurAge;
 
 public partial class AppShell : Shell
 {
-	public AppShell()
-{
-    InitializeComponent();
+    public AppShell(IServiceProvider serviceProvider)
+    {
+        InitializeComponent();
 
-    // Déclare la route.
-    Routing.RegisterRoute(
-        nameof(ResultatPage),
-        typeof(ResultatPage));
-}
+        MainPageShellContent.ContentTemplate = new DataTemplate(
+            () => serviceProvider.GetRequiredService<MainPage>());
+
+        Routing.RegisterRoute(
+            NavigationRoutes.Resultat,
+            typeof(ResultatPage));
+    }
 }

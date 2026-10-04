@@ -31,6 +31,11 @@
                 Text="Effacer"
                 Command="{Binding EffacerCommand}" />
 
+            <Button
+                Text="Voir le résultat"
+                Command="{Binding AfficherResultatCommand}"
+                IsVisible="{Binding ResultatVisible}" />
+
             <Label
                 Text="{Binding Resultat}"
                 FontSize="20"
