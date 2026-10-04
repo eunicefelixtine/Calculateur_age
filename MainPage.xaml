@@ -13,34 +13,24 @@
                 FontSize="16" />
 
             <Entry
-                x:Name="entryNom"
-                Placeho<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="CalculateurAge.MainPage"
-    Title="Calculateur">
-
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="12">
-
-            <Labellder="Votre nom" />
+                Text="{Binding Nom, Mode=TwoWay}"
+                Placeholder="Votre nom" />
 
             <Label
                 Text="Date de naissance"
                 FontSize="16" />
 
             <DatePicker
-                x:Name="pickerDate" />
+                Date="{Binding DateNaissance}" />
 
             <Button
-                x:Name="btnCalculer"
                 Text="Calculer"
-                Clicked="OnCalculerClicked" />
+                Command="{Binding CalculerCommand}" />
 
             <Label
-                x:Name="lblResultat"
+                Text="{Binding Resultat}"
                 FontSize="20"
-                IsVisible="False" />
+                IsVisible="{Binding ResultatVisible}" />
 
         </VerticalStackLayout>
     </ScrollView>
