@@ -41,6 +41,11 @@
                 FontSize="18"
                 IsVisible="{Binding ResultatVisible}" />
 
+            <Label
+                Text="{Binding MessageAnniversaire}"
+                FontSize="18"
+                IsVisible="{Binding ResultatVisible}" />
+
         </VerticalStackLayout>
     </ScrollView>
 

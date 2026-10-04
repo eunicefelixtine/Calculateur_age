@@ -11,6 +11,8 @@ public class CalculateurViewModel : BaseViewModel
 
     private string _messageAge = "";
 
+    private string _messageAnniversaire = "";
+
     private bool _resultatVisible;
 
     public string Nom
@@ -53,6 +55,15 @@ public class CalculateurViewModel : BaseViewModel
             value);
     }
 
+    public string MessageAnniversaire
+    {
+        get => _messageAnniversaire;
+
+        set => SetField(
+            ref _messageAnniversaire,
+            value);
+    }
+
     public bool ResultatVisible
     {
         get => _resultatVisible;
@@ -82,6 +93,7 @@ public class CalculateurViewModel : BaseViewModel
         DateNaissance = DateTime.Today.AddYears(-20);
         Resultat = "";
         MessageAge = "";
+        MessageAnniversaire = "";
         ResultatVisible = false;
     }
 
@@ -99,7 +111,20 @@ public class CalculateurViewModel : BaseViewModel
             age--;
         }
 
+        DateTime aujourdHui = DateTime.Today;
+        DateTime prochainAnniversaire = DateNaissance
+            .AddYears(aujourdHui.Year - DateNaissance.Year)
+            .Date;
+
+        if (prochainAnniversaire < aujourdHui)
+            prochainAnniversaire = prochainAnniversaire.AddYears(1);
+
+        int joursAvantAnniversaire =
+            (prochainAnniversaire - aujourdHui).Days;
+
         MessageAge = age >= 18 ? "Majeur" : "Mineur";
+        MessageAnniversaire =
+            $"Prochain anniversaire dans {joursAvantAnniversaire} jours.";
         Resultat = $"{Nom}, vous avez {age} ans";
         ResultatVisible = true;
     }

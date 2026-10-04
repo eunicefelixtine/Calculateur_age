@@ -5325,13 +5325,3 @@
 /home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/assets/x86_64/_Microsoft.Android.Resource.Designer.dll
 /home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/assets/x86_64/_Microsoft.Android.Resource.Designer.jlo.xml
 /home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/assets/x86_64/_Microsoft.Android.Resource.Designer.typemap.xml
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/typemaps.x86_64.ll
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/environment.x86_64.ll
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/marshal_methods.x86_64.ll
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/compressed_assemblies.x86_64.ll
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/typemaps.x86_64.o
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/environment.x86_64.o
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/compressed_assemblies.x86_64.o
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/marshal_methods.x86_64.o
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/android/jni_remap.x86_64.o
-/home/eunice/Documents/Ecole/dev mobil/CalculateurAge/obj/Debug/net10.0-android/app_shared_libraries/x86_64/libxamarin-app.so
