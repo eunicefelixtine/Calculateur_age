@@ -62,11 +62,24 @@ public class CalculateurViewModel : BaseViewModel
 
     public RelayCommand CalculerCommand { get; }
 
+    public RelayCommand EffacerCommand { get; }
+
     public CalculateurViewModel()
     {
         CalculerCommand = new RelayCommand(
             Calculer,
             () => !string.IsNullOrWhiteSpace(Nom));
+
+        EffacerCommand = new RelayCommand(Effacer);
+    }
+
+    private void Effacer()
+    {
+        Nom = "";
+        DateNaissance = DateTime.Today.AddYears(-20);
+        Resultat = "";
+        MessageAge = "";
+        ResultatVisible = false;
     }
 
     // Logique métier : aucun contrôle d'interface.
