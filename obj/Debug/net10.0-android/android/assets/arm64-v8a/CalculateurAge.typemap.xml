@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="CalculateurAge" mvid="866f7c6accf640289b1511541baffffa">
+<api type="debug" assembly-name="CalculateurAge" mvid="a6df3a365660478bb8846edddafcd453">
   <java-to-managed>
     <entry java-name="crc64690927609462a0e4/MainActivity" managed-name="CalculateurAge.MainActivity, CalculateurAge" managed-type-token-id="33554441" />
     <entry java-name="crc64690927609462a0e4/MainApplication" managed-name="CalculateurAge.MainApplication, CalculateurAge" managed-type-token-id="33554442" />

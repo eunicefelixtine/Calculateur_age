@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+
 namespace CalculateurAge.ViewModels;
 
 public class CalculateurViewModel : BaseViewModel
@@ -14,6 +16,8 @@ public class CalculateurViewModel : BaseViewModel
     private string _messageAnniversaire = "";
 
     private bool _resultatVisible;
+
+    public ObservableCollection<string> HistoriqueCalculs { get; } = new();
 
     public string Nom
     {
@@ -126,6 +130,7 @@ public class CalculateurViewModel : BaseViewModel
         MessageAnniversaire =
             $"Prochain anniversaire dans {joursAvantAnniversaire} jours.";
         Resultat = $"{Nom}, vous avez {age} ans";
+        HistoriqueCalculs.Add($"{Nom} — {age} ans");
         ResultatVisible = true;
     }
 }

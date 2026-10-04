@@ -46,6 +46,23 @@
                 FontSize="18"
                 IsVisible="{Binding ResultatVisible}" />
 
+            <Label
+                Text="Historique des calculs"
+                FontSize="18"
+                FontAttributes="Bold" />
+
+            <VerticalStackLayout
+                BindableLayout.ItemsSource="{Binding HistoriqueCalculs}"
+                Spacing="4">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Label
+                            Text="{Binding .}"
+                            FontSize="16" />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+
         </VerticalStackLayout>
     </ScrollView>
 
